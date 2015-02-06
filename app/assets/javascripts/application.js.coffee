@@ -1,5 +1,6 @@
 #= require jquery
 #= require jquery_ujs
+#= require foundation
 #= require turbolinks
 #= require handlebars
 #= require ember
@@ -10,3 +11,5 @@
 # for more details see: http://emberjs.com/guides/application/
 window.SkiteEmber = Ember.Application.create()
 
+$ ->
+  $(document).foundation()
