@@ -30,5 +30,6 @@ module SkiteEmber
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.web_console.whitelisted_ips = %w( 127.0.0.1  192.168.238.1 192.168.0.1 )
   end
 end
