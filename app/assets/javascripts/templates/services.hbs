@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="large-4 columns"></div>
+  <div class="large-8 columns">
+    <form action="#">
+      <fieldset>
+        <legend>Services</legend>
+        <div class="row">
+          <div class="large-10 columns">
+            {{input type=text}}
+          </div>
+          <div class="lerge-2 columns">
+            <button class="button small">New Service</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <h3>Services</h3>
+    <hr/>
+    <ul class="services">
+      {{#each service in services}}
+      {{else}}
+        <li>
+          <h4>There are no services yet.</h4>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
