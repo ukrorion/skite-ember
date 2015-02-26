@@ -9,6 +9,7 @@
 
 # for more details see: http://emberjs.com/guides/application/
 window.SkiteEmber = Ember.Application.create()
+SkiteEmber.ApplicationAdapter = DS.FixtureAdapter.extend();
 
 $ ->
   $(document).foundation()
