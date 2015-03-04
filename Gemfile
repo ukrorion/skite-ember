@@ -14,6 +14,7 @@ gem 'ember-source', '~> 1.10.0'
 gem 'ember-rails'
 gem 'slim'
 gem 'zurb-foundation'
+gem 'devise'
 
 
 group :development, :test do
