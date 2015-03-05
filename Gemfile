@@ -23,5 +23,10 @@ group :development, :test do
   gem 'better_errors'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
 end
 
