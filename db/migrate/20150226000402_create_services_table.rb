@@ -1,8 +1,7 @@
 class CreateServicesTable < ActiveRecord::Migration
   def change
     create_table :services do |t|
-      t.string :name
-      t.string :s_type
+      t.string :name, limit: 50
       t.timestamps
     end
   end

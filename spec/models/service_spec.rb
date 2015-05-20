@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 describe Service, type: :model  do
-  it { should has_and_belong_to_many(:providers) }
+  describe "fields and relation" do
+    it { should have_many(:products) } 
+
+    it { should have_db_column(:name).of_type(:string) }
+  end
 end

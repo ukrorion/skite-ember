@@ -7,7 +7,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.date   :date_of_birth
-      t.boolean :gender
+      t.string :gender, limit: 10
 
 
       ## Recoverable
