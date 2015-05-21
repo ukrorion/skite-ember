@@ -8,8 +8,8 @@
 #= require skite_ember
 
 # for more details see: http://emberjs.com/guides/application/
-window.SkiteEmber = Ember.Application.create()
-SkiteEmber.ApplicationAdapter = DS.FixtureAdapter.extend();
-
-$ ->
-  $(document).foundation()
+# window.SkiteEmber = Ember.Application.create()
+# SkiteEmber.ApplicationAdapter = DS.FixtureAdapter.extend();
+#
+# $ ->
+#   $(document).foundation()

@@ -1,0 +1,30 @@
+.row
+  .large-4.large-centered.columns
+    .row
+      .large-12.columns
+        h2 Log in
+
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .row
+        .large-12.columns
+          = f.label :email
+          = f.email_field :email, autofocus: true
+
+      .row
+        .large-12.columns
+          = f.label :password
+          = f.password_field :password, autocomplete: "off"
+
+      - if devise_mapping.rememberable?
+        .row
+          .large-12.columns
+            = f.label :remember_me do
+              = f.check_box :remember_me
+              span Remember me
+
+      .row
+        .large-12.columns
+          = f.submit "Log in", class: "button tiny"
+    .row
+      .large-12.columns
+        = render "devise/shared/links"
