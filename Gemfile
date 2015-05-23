@@ -13,7 +13,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'ember-source', '~> 1.10.0'
 gem 'ember-rails'
 gem 'slim'
-gem 'zurb-foundation'
+gem 'foundation-rails'
+gem 'handlebars_assets'
 gem 'devise'
 
 
