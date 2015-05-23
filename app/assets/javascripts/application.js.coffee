@@ -11,5 +11,5 @@
 # window.SkiteEmber = Ember.Application.create()
 # SkiteEmber.ApplicationAdapter = DS.FixtureAdapter.extend();
 #
-# $ ->
-#   $(document).foundation()
+$ ->
+  $(document).foundation()

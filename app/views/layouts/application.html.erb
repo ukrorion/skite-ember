@@ -22,10 +22,10 @@
   </head>
 
   <body>
-
+    <%= flash_messages unless flash.empty? %>
     <%= yield %>
 
-    
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>
