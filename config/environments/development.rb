@@ -40,4 +40,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  config.ember.variant = :development
+  config.handlebars.precompile = true
+  config.ember.ember_path = 'app/assets/javascripts/ember_app'
 end

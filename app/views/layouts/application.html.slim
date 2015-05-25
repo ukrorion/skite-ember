@@ -16,4 +16,6 @@ html lang="en"
         = flash_messages unless flash.empty?
         == yield
 
-    = javascript_include_tag "application", 'data-turbolinks-track' => true
+    = javascript_include_tag "application"
+    = javascript_include_tag "ember_app/templates/all"
+    = javascript_include_tag params[:controller] if params && params[:controller].present?
