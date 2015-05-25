@@ -42,6 +42,9 @@ GEM
     barber (0.9.0)
       ember-source (>= 1.0, < 2)
       execjs (>= 1.2, < 3)
+    barber-emblem (0.1.2)
+      barber (>= 0.4.1)
+      emblem-source
     bcrypt (3.1.10)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -102,6 +105,10 @@ GEM
       jquery-rails (>= 1.0.17)
       railties (>= 3.1)
     ember-source (1.10.1)
+    emblem-rails (0.2.2)
+      barber-emblem (~> 0.1.1)
+      ember-rails (>= 0.14.0)
+    emblem-source (0.4.0)
     erubis (2.7.0)
     execjs (2.5.2)
     factory_girl (4.5.0)
@@ -261,6 +268,7 @@ DEPENDENCIES
   devise
   ember-rails
   ember-source (~> 1.10.0)
+  emblem-rails
   factory_girl_rails
   faker
   foundation-rails
