@@ -36,11 +36,10 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
   config.consider_all_requests_local = true
-  BetterErrors::Middleware.allow_ip! "192.168.238.1"
+  BetterErrors::Middleware.allow_ip! "192.168.238.1" #192.168.191.1
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   config.ember.variant = :development
-  config.handlebars.precompile = true
-  config.ember.ember_path = 'app/assets/javascripts/ember_app'
+  config.ember.ember_path = "#{Rails.root}/app/assets/javascripts/ember_app"
 end
