@@ -1,5 +1,5 @@
 // Fetched from channel: release, with url http://builds.emberjs.com/beta/ember-data.js
-// Fetched on: 2015-05-25T23:14:28Z
+// Fetched on: 2015-05-26T15:49:58Z
 (function() {
     "use strict";
     var ember$data$lib$system$model$errors$invalid$$create = Ember.create;
