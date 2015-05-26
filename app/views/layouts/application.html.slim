@@ -9,6 +9,7 @@ html lang="en"
     = stylesheet_link_tag "application"
     = javascript_include_tag "vendor/modernizr"
     = javascript_include_tag "application"
+    / = javascript_include_tag "ember_app/templates/all"
     = javascript_include_tag params[:controller] if params && params[:controller].present?
     = csrf_meta_tag
 

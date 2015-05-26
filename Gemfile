@@ -10,12 +10,10 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'ember-rails'
-gem 'emblem-rails'
-gem "ember-source", "~> 1.11.0"
+gem 'ember-rails', '~> 0.18.2'
+gem "ember-source", "~> 1.12.0"
 gem 'slim'
 gem 'foundation-rails'
-gem 'handlebars_assets'
 gem 'devise'
 
 
