@@ -7,18 +7,11 @@ window.SkiteEmber = Ember.Application.create
   LOG_TRANSITIONS_INTERNAL: true
   LOG_VIEW_LOOKUPS: true
   LOG_ACTIVE_GENERATION: true
-  resolver:
+  Resolver:
     Ember.DefaultResolver.extend
       resolveTemplate: (parsedName) ->
-        parsedName.fullNameWithoutType = "app1/" + parsedName.fullNameWithoutType
-        @_super parsedName
-
-  # Resolver:
-  #   Ember.DefaultResolver.extend
-  #     resolveTemplate: (parsedName) ->
-  #       resolvedTemplate = @_super(parsedName)
-  #       return 'ember_app' + resolvedTemplate  if resolvedTemplate
-  #       Ember.TEMPLATES["not_found"]
+        return Ember.TEMPLATES['ember_app/' +parsedName.fullNameWithoutType]  if parsedName
+        Ember.TEMPLATES["not_found"]
 
 
 

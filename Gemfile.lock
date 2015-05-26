@@ -94,9 +94,9 @@ GEM
     diff-lcs (1.2.5)
     ember-data-source (1.0.0.beta.18)
       ember-source (~> 1.8)
-    ember-handlebars-template (0.1.5)
+    ember-handlebars-template (0.2.0)
       barber (>= 0.9.0)
-      sprockets (>= 2.1, < 3.1)
+      sprockets (>= 2.1, < 3.2)
     ember-rails (0.18.2)
       active_model_serializers
       ember-data-source (>= 1.0.0.beta.5)
@@ -104,7 +104,7 @@ GEM
       ember-source (>= 1.1.0)
       jquery-rails (>= 1.0.17)
       railties (>= 3.1)
-    ember-source (1.10.1)
+    ember-source (1.11.3.1)
     emblem-rails (0.2.2)
       barber-emblem (~> 0.1.1)
       ember-rails (>= 0.14.0)
@@ -229,7 +229,7 @@ GEM
       spring (>= 0.9.1)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
-    sprockets (3.0.3)
+    sprockets (3.1.0)
       rack (~> 1.0)
     sprockets-rails (2.3.1)
       actionpack (>= 3.0)
@@ -267,7 +267,7 @@ DEPENDENCIES
   database_cleaner
   devise
   ember-rails
-  ember-source (~> 1.10.0)
+  ember-source (~> 1.11.0)
   emblem-rails
   factory_girl_rails
   faker
