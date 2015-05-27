@@ -11,8 +11,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'ember-rails', '~> 0.18.2'
-gem 'emblem-rails', '~> 0.2.2'
 gem "ember-source", "~> 1.12.0"
+gem 'hamlbars', '~> 2.1'
 gem 'slim'
 gem 'foundation-rails'
 gem 'devise'
