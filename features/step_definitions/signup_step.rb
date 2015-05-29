@@ -39,10 +39,10 @@ When(/^I fill form with correct data$/) do
   within("//form[@id='new_user']") do
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
-    fill_in 'First Name', with: @user.first_name
-    fill_in 'Last Name', with: @user.last_name
+    fill_in 'First name', with: @user.first_name
+    fill_in 'Last name', with: @user.last_name
     fill_in 'Date of birth', with: @user.date_of_birth
-    select 'Mails', :from => 'Gender'
+    select 'Mail', :from => 'Gender'
   end
   click_button 'Sign up'
 end

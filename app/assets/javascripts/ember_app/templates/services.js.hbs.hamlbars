@@ -1,28 +1,18 @@
-<div class="row">
-  <div class="large-4 columns"></div>
-  <div class="large-8 columns">
-    <form action="#">
-      <fieldset>
-        <legend>Add new services</legend>
-        <div class="row">
-          <div class="large-12 columns">
-            {{input type=text}}
-            {{input type=text}}
-            <button class="button tiny">Create</button>
-          </div>
-        </div>
-      </fieldset>
-    </form>
-    <h3>Services</h3>
-    <hr/>
-    <ul class="services">
-      {{#each service in model}}
-        <li>Name: {{service.name}}</li>
-      {{else}}
-        <li>
-          <h4>There are no services yet.</h4>
-        </li>
-      {{/each}}
-    </ul>
-  </div>
-</div>
+.row
+  .large-4.columns
+  .large-8.columns
+    %form{:action => "#"}
+      %fieldset
+        %legend Add new services
+        .row
+          .large-12.columns
+            = hb 'input type=text'
+            = hb 'input type=text'
+            %button.button.tiny Create
+    %h3 Services
+    %hr/
+    %ul.services
+      = hb 'each service in model' do
+        %li
+          Name:
+          = hb 'service.name'
