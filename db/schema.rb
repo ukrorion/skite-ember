@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20150520223139) do
     t.string   "street",           limit: 100
     t.string   "house_number",     limit: 20
     t.string   "apartment_number", limit: 20
-    t.string   "postal_code",      limit: 20
+    t.string   "postcode",         limit: 20
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

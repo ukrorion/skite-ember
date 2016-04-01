@@ -6,7 +6,7 @@ class AddAddressesTable < ActiveRecord::Migration
       t.string :street, limit: 100
       t.string :house_number, limit: 20
       t.string :apartment_number, limit: 20
-      t.string :postal_code, limit: 20
+      t.string :postcode, limit: 20
       t.references :user, index: true, foreing_key: true
       t.timestamps
     end

@@ -1,16 +1,21 @@
 require 'rails_helper'
 
 describe Address, type: :model  do
-  describe "fields and relation" do
-    it { should belong_to(:user) }
-    it { should have_many(:counters) }
+  describe "fields" do
+    let(:address) { FactoryGirl.create :address }
 
-    it { should have_db_column(:region).of_type(:string) }
-    it { should have_db_column(:city).of_type(:string) }
-    it { should have_db_column(:street).of_type(:string) }
-    it { should have_db_column(:house_number).of_type(:string) }
-    it { should have_db_column(:apartment_number).of_type(:string) }
-    it { should have_db_column(:postal_code).of_type(:string) }
-    it { should have_db_index(:user_id) }
+    it 'should has defined attributes' do
+      expect(address.attributes.keys).to include("region", "city", "street", "house_number", "apartment_number", "postcode")
+    end
+
+    it 'should be a string values' do
+      expect(address.region).to be_a String
+      expect(address.city).to be_a String
+      expect(address.street).to be_a String
+      expect(address.house_number).to be_a String
+      expect(address.apartment_number).to be_a String
+      expect(address.postcode).to be_a String
+    end
+
   end
 end
