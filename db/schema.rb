@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150520223139) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "addresses", force: :cascade do |t|
     t.string   "region",           limit: 100
     t.string   "city",             limit: 100
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 20150520223139) do
     t.string   "house_number",     limit: 20
     t.string   "apartment_number", limit: 20
     t.string   "postal_code",      limit: 20
-    t.integer  "user_id",          limit: 4
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -28,8 +31,8 @@ ActiveRecord::Schema.define(version: 20150520223139) do
   add_index "addresses", ["user_id"], name: "index_addresses_on_user_id", using: :btree
 
   create_table "counters", force: :cascade do |t|
-    t.integer  "address_id", limit: 4
-    t.integer  "product_id", limit: 4
+    t.integer  "address_id"
+    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,17 +41,17 @@ ActiveRecord::Schema.define(version: 20150520223139) do
   add_index "counters", ["product_id"], name: "index_counters_on_product_id", using: :btree
 
   create_table "prices", force: :cascade do |t|
-    t.float   "value",      limit: 24
+    t.float   "value"
     t.date    "end_date"
-    t.integer "product_id", limit: 4
+    t.integer "product_id"
   end
 
   add_index "prices", ["product_id"], name: "index_prices_on_product_id", using: :btree
 
   create_table "products", force: :cascade do |t|
-    t.boolean  "editable",    limit: 1
-    t.integer  "provider_id", limit: 4
-    t.integer  "service_id",  limit: 4
+    t.boolean  "editable"
+    t.integer  "provider_id"
+    t.integer  "service_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -57,11 +60,11 @@ ActiveRecord::Schema.define(version: 20150520223139) do
   add_index "products", ["service_id"], name: "index_products_on_service_id", using: :btree
 
   create_table "providers", force: :cascade do |t|
-    t.string   "name",             limit: 255
-    t.integer  "bank_account",     limit: 4
-    t.integer  "checking_account", limit: 4
-    t.integer  "user_id",          limit: 4
-    t.integer  "address_id",       limit: 4
+    t.string   "name"
+    t.integer  "bank_account"
+    t.integer  "checking_account"
+    t.integer  "user_id"
+    t.integer  "address_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -71,15 +74,15 @@ ActiveRecord::Schema.define(version: 20150520223139) do
 
   create_table "roles", force: :cascade do |t|
     t.string   "name",       limit: 50
-    t.integer  "priority",   limit: 4
-    t.boolean  "active",     limit: 1
+    t.integer  "priority"
+    t.boolean  "active"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
   end
 
   create_table "roles_users", id: false, force: :cascade do |t|
-    t.integer "user_id", limit: 4, null: false
-    t.integer "role_id", limit: 4, null: false
+    t.integer "user_id", null: false
+    t.integer "role_id", null: false
   end
 
   add_index "roles_users", ["role_id"], name: "index_roles_users_on_role_id", using: :btree
@@ -92,20 +95,20 @@ ActiveRecord::Schema.define(version: 20150520223139) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "first_name",             limit: 255
-    t.string   "last_name",              limit: 255
+    t.string   "email",                             default: "", null: false
+    t.string   "encrypted_password",                default: "", null: false
+    t.string   "first_name"
+    t.string   "last_name"
     t.date     "date_of_birth"
     t.string   "gender",                 limit: 10
-    t.string   "reset_password_token",   limit: 255
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.integer  "sign_in_count",                     default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -36,9 +36,11 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
   config.consider_all_requests_local = true
-  BetterErrors::Middleware.allow_ip! "192.168.238.1" #192.168.191.1
+  BetterErrors::Middleware.allow_ip! "192.168.226.1" #192.168.191.1
+  config.web_console.whitelisted_ips = %w(127.0.0.1 192.168.226.1)
+
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  config.ember.variant = :development
+  # config.ember.variant = :development
 end
