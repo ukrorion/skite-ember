@@ -11,5 +11,7 @@
  * file per style scope.
  *
  *= require_self
- *= require ./foundation_and_overrides
  */
+
+@import 'settings';
+@import 'foundation_and_overrides';
