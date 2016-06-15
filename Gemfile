@@ -22,6 +22,8 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem "spring-commands-cucumber"
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'shoulda-callback-matchers'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'cucumber-rails', require: false

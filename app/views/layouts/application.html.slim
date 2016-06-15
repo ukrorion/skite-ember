@@ -12,6 +12,11 @@ html lang="en"
 
   body
     .row
-      .large-12.columns
-        = flash_messages unless flash.empty?
-        == yield
+      .large-10.columns.large-offset-1
+        .row
+          .large-12.columns
+            = render 'layouts/navigation'
+        .row
+          .large-12.columns
+            = flash_messages unless flash.empty?
+            == yield

@@ -73,12 +73,15 @@ ActiveRecord::Schema.define(version: 20150520223139) do
   add_index "providers", ["user_id"], name: "index_providers_on_user_id", using: :btree
 
   create_table "roles", force: :cascade do |t|
-    t.string   "name",       limit: 50
+    t.string   "name",        limit: 50
     t.integer  "priority"
+    t.string   "description"
     t.boolean  "active"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
+
+  add_index "roles", ["name"], name: "index_roles_on_name", unique: true, using: :btree
 
   create_table "roles_users", id: false, force: :cascade do |t|
     t.integer "user_id", null: false
